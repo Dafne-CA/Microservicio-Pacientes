@@ -38,6 +38,8 @@ public class PacienteService implements IPacienteService{
         this.savePaciente(pac);
     }
 
-   
-    
+    @Override
+    public Paciente findPacienteDni(String dni) {
+        return pacienteRepo.findByDni(dni);
+    }
 }
